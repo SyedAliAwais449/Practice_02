@@ -25,6 +25,20 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(labels[1]);
     }
 
+    public void onClick2(View v){
+        String [] Colors = {"Red", "Green", "Blue"};
+        AlertDialog.Builder builder= new AlertDialog.Builder(this);
+        builder.setTitle("SetColor");
+        builder.setItems(Colors, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, Colors[which], Toast.LENGTH_SHORT).show();
+            }
+        });
+        AlertDialog alertDialog= builder.create();
+        alertDialog.show();
+    }
+
     public void Toast(View v){
         Toast toast = Toast.makeText(this, "Hi! I'm toast", Toast.LENGTH_SHORT);
         toast.show();
