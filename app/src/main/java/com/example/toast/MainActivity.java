@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog= builder.create();
         alertDialog.show();
+    }
+    public void onClick3(View v){
+        Intent intent= new Intent(MainActivity.this,MainActivity2.class);
+        startActivity(intent);
     }
 
     public void Toast(View v){
