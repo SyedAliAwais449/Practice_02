@@ -17,7 +17,7 @@ import java.util.Collections;
 public class MainActivity2 extends AppCompatActivity {
     ArrayList<String> arrayList;
     ListView listView;
-    ArrayAdapter<String> adapter;
+    MyAdapterList adapter;
     EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +32,13 @@ public class MainActivity2 extends AppCompatActivity {
         arrayList.add("Ahmad");
         arrayList.add("Babar");
         Collections.sort(arrayList);
-        adapter= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arrayList);
+        adapter= new MyAdapterList(this,arrayList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity2.this, arrayList.get(position), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity2.this, arrayList.get(position), Toast.LENGTH_SHORT).show();
+
             }
         });
     }

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
     public void onClick3(View v){
-        Intent intent= new Intent(MainActivity.this,MainActivity2.class);
+        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
         startActivity(intent);
     }
 
@@ -60,14 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog alertDialog= builder.create();
         alertDialog.show();
-//        LayoutInflater layoutInflater= getLayoutInflater();
-//        View myLayout=layoutInflater.inflate(R.layout.customlayout,(ViewGroup)findViewById(R.id.layout));
-//        Toast myToast=new Toast(getApplicationContext());
-//
-//        myToast.setDuration(Toast.LENGTH_LONG);
-//
-//        myToast.setView(myLayout);
-//
-//        myToast.show();
+        LayoutInflater layoutInflater= getLayoutInflater();
+        View myLayout=layoutInflater.inflate(R.layout.customlayout,(ViewGroup)findViewById(R.id.layout1));
+        Toast myToast=new Toast(getApplicationContext());
+
+        myToast.setDuration(Toast.LENGTH_LONG);
+        myToast.setView(myLayout);
+        myToast.show();
+
     }
 }
