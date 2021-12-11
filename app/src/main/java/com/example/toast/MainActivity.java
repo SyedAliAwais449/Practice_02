@@ -69,4 +69,8 @@ public class MainActivity extends AppCompatActivity {
         myToast.show();
 
     }
+    public void RecyclerViewListner(View v){
+        Intent intent= new Intent(MainActivity.this, MainActivity3.class);
+        startActivity(intent);
+    }
 }
