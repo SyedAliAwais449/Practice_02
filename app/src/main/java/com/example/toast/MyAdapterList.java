@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,7 +23,6 @@ public class MyAdapterList extends ArrayAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
         View singleEntityView=inflater.inflate(
-
                 R.layout.customlayout, null,true);
         TextView titleHeading = singleEntityView.findViewById(R.id.textView3);
         titleHeading.setText(name.get(position));
